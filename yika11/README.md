@@ -1,6 +1,6 @@
 # zhan-wan-program
 
-> A zhan-wan Mpvue project
+> A Car Mpvue project
 
 ## Build Setup
 
