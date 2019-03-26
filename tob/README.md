@@ -1,6 +1,6 @@
-# zhan-wan-program
+# YIKA-toB program
 
-> A zhan-wan Mpvue project
+> A YIKA-toB Mpvue project
 
 ## Build Setup
 
