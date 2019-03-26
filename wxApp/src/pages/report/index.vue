@@ -1,7 +1,7 @@
 <template>
   <div class="mainWrap">
     <div class="bg">
-      
+ 
      <h4>昨日交易量（台）：10000</h4>    
     </div>
   </div>
