@@ -7,9 +7,9 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
+	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
-	"appid": "wx44a452fb08b0a990",
+	"appid": "wx9c9548e67b8e331b",
 	"projectname": "zhan-wan-report",
 	"libVersion": "2.2.1",
 	"condition": {
