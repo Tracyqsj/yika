@@ -2,17 +2,13 @@
   <div class="mainWrap">
     <div class="bg">
       
-     <h4>昨日交易量（台）：10000</h4>
-
-      <mpvue-echarts :echarts="echarts" :onInit="onInit" canvasId="demo-canvas" />
-      
+     <h4>昨日交易量（台）：10000</h4>    
     </div>
   </div>
 </template>
 
 <script>
-import echarts from 'echarts'
-import mpvueEcharts from 'mpvue-echarts'
+
 
 let chart = null;
 
