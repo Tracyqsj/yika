@@ -1,8 +1,8 @@
 {
-  "name": "zhan-wan-program",
+  "name": "yika-mini-program",
   "version": "1.0.0",
-  "description": "A zhan-wan Mpvue project",
-  "author": "carlos",
+  "description": "yika-mini-program",
+  "author": "qishengjie",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
