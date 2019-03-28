@@ -1,53 +1,5 @@
 <template>
   <div class="page">
-    <!-- 这是写html的地方，记住外层只有一个div-->
-    <!-- <div class="weui-search-bar">
-      <div class="weui-search-bar__form">
-        <div class="weui-search-bar__box">
-          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-          <input
-            type="text"
-            class="weui-search-bar__input"
-            placeholder="搜索"
-            v-model="inputVal"
-            :focus="inputShowed"
-            @input="inputTyping"
-          >
-          <div class="weui-icon-clear" v-if="inputVal.length > 0" @click="clearInput">
-            <icon type="clear" size="14"></icon>
-          </div>
-        </div>
-        <label class="weui-search-bar__label" :hidden="inputShowed" @click="showInput">
-          <icon class="weui-icon-search" type="search" size="14"></icon>
-          <div class="weui-search-bar__text">搜索</div>
-        </label>
-      </div>
-      <div class="weui-search-bar__cancel-btn" :hidden="!inputShowed" @click="hideInput">取消</div>
-    </div>
-
-    <div class="weui-cells searchbar-result" v-if="inputVal.length > 0">
-      <navigator url class="weui-cell" hover-class="weui-cell_active">
-        <div class="weui-cell__bd">
-          <div>实时搜索文本</div>
-        </div>
-      </navigator>
-      <navigator url class="weui-cell" hover-class="weui-cell_active">
-        <div class="weui-cell__bd">
-          <div>实时搜索文本</div>
-        </div>
-      </navigator>
-      <navigator url class="weui-cell" hover-class="weui-cell_active">
-        <div class="weui-cell__bd">
-          <div>实时搜索文本</div>
-        </div>
-      </navigator>
-      <navigator url class="weui-cell" hover-class="weui-cell_active">
-        <div class="weui-cell__bd">
-          <div>实时搜索文本</div>
-        </div>
-      </navigator>
-    </div>-->
-
     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
       <block v-for="(item, index) in imgs" :key="index">
         <swiper-item>
@@ -96,24 +48,16 @@
     </div>
  
     <button class="weui-btn tuijian" @click="handleclick">今日推荐</button>
-    <div class="weui-cell">
+    <div class="weui-cell" v-for="(item,index) in result.data" @click="tuijianClick">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-        <img src="/static/images/benchi-article.jpg" style="width:50px;display: block">
+        <img :src="item.img" style="width:70px;display: block">
       </div>
       <div class="weui-cell__bd">
-        <p style="font-size: 16px;">全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万</p>
-        <p style="font-size: 13px;color: #888888;">开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。</p>
+        <p style="font-size: 16px;">{{item.title}}</p>
+        <p style="font-size: 13px;color: #888888;">{{item.content}}</p>
       </div>
     </div>
-    <div class="weui-cell">
-      <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-        <img src="/static/images/article1.jpg" style="width: 70px;display: block">
-      </div>
-      <div class="weui-cell__bd">
-        <p style="font-size: 16px;">智能网联汽车测试示范区发展研究</p>
-        <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》</p>
-      </div>
-    </div>
+
     <button class="weui-btn weui-btn_default tuijian" @click="handleclick">查看更多</button>
   </div>
 </template>
@@ -131,7 +75,21 @@ export default {
         "/static/images/banner2.jpg",
         "/static/images/banner3.jpg",
         "/static/images/banner4.jpg"
-      ]
+      ],
+      result:{
+        data:[
+          {
+            img : '/static/images/benchi-article.jpg',
+            title: '全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万',
+            content: '开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。'
+
+          },{
+            img : '/static/images/article1.jpg',
+            title: '智能网联汽车测试示范区发展研究',
+            content: '摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》'
+          }
+        ]
+      }
     };
   },
 
@@ -151,12 +109,29 @@ export default {
       console.log(e);
       this.inputVal = e.mp.detail.value;
     },
-    handleclick() {
+    tuijianClick() {
       wx.navigateTo({
         //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
         url: "../article/main",
         
       });
+    },
+    handleclick(){
+      this.result.data.push(
+        {
+          img : '/static/images/benchi-article.jpg',
+          title: '全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万',
+          content: '开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。'
+
+        }
+      );
+      this.result.data.push(
+        {
+          img : '/static/images/article1.jpg',
+          title: '智能网联汽车测试示范区发展研究',
+          content: '摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》'
+        }
+      );
     }
   },
   mounted() {

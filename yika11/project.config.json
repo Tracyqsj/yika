@@ -7,10 +7,10 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
+	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
-	"appid": "wx931900f51f0af468",
-	"projectname": "YIKA report",
+	"appid": "wx9c9548e67b8e331b",
+	"projectname": "YIKA%20report",
 	"libVersion": "2.2.1",
 	"condition": {
 		"search": {
