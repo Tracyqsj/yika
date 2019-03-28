@@ -22,7 +22,8 @@ export default {
       "^pages/login/main",
       "pages/market/main",
       "pages/report/main",
-      "pages/concern/main"
+      "pages/concern/main",
+      "pages/history/main"
   
     ],
     window: {

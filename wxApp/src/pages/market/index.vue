@@ -8,7 +8,7 @@
       <div style="text-align: center;font-size: 14px;color: #cccccc" >
         搜到{{result.recordSize}}条结果
       </div>
-      <div class="list-item" v-for="(item, index) in result.data">
+      <div class="list-item" v-for="(item, index) in result.data" :key="item.id" @click="handleClick(index)">
         <div class="list-item-img">
           <img style="width: 100%;height: 100%" src="../../../static/images/benchi.png">
         </div>
@@ -57,11 +57,17 @@ export default {
     };
   },
   methods: {
+    handleClick(index){
+      wx.navigateTo({
+        url:'../history/main?id='+index
+      })
+    },
     search(){
       this.result.page ++;
-      this.result.recordSize = 50;
+      this.result.recordSize = 12;
 
       this.result.data.push({
+        id: (this.result.page-1)*this.result.pageSize + 1,
         name:'人人车',
         daySaleNumber:100,
         mouthSaleNumber:1000,
@@ -70,6 +76,7 @@ export default {
         todayProfit: '1000万'
       });
       this.result.data.push({
+        id: (this.result.page-1)*this.result.pageSize + 2,
         name:'优享车',
         daySaleNumber:90,
         mouthSaleNumber:700,
@@ -78,6 +85,7 @@ export default {
         todayProfit: '1000万'
       });
       this.result.data.push({
+        id: (this.result.page-1)*this.result.pageSize + 3,
         name:'懂车帝',
         daySaleNumber:120,
         mouthSaleNumber:600,
