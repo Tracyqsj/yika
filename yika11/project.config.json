@@ -9,8 +9,8 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "wx44a452fb08b0a990",
-	"projectname": "zhan-wan-report",
+	"appid": "wx931900f51f0af468",
+	"projectname": "YIKA report",
 	"libVersion": "2.2.1",
 	"condition": {
 		"search": {

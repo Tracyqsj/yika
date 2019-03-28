@@ -3,15 +3,21 @@
     <div class="bg">
       <div>
         <div class="weui-search-bar__box">
-          <!-- <div class="nav">
-            shanghai
-          </div> -->
-   
           <icon class="weui-icon-search_in-box nav" type="search" size="14"></icon>
+             <div class="grid">
+        <a  class="weui-grid">
+          <p class="weui-grid__label">10万以下</p>
+        </a>
+        <a  class="weui-grid">
+          <p class="weui-grid__label">20万以下</p>
+        </a>
+        <a  class="weui-grid">
+          <p class="weui-grid__label">30万以上</p>
+    </a>
           <input
             type="text"
             class="weui-search-bar__input"
-            placeholder="搜索"
+            placeholder="高级搜索"
             v-model="inputVal"
             :focus="inputShowed"
             @input="inputTyping"
@@ -20,30 +26,68 @@
             <icon type="clear" size="14"></icon>
           </div>
         </div>
+      </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block" >
         </div>
-        <a  class="weui-media-box weui-media-box_appmsg">
-          <div class="weui-media-box__hd">
-            <img style="width:20px;height:20px;" src="/static/images/benchi.jpg">
-          </div>
-          <div class="weui-media-box__bd">
-            <h4 class="weui-media-box__title">大众 辉昂 2018款 改款 380TSI 两驱商务版</h4>
-            <button class="weui-media-box__desc">关注</button>
-            <button class="weui-media-box__desc">预定热线</button>
-          </div>
-        </a>
-         <a  class="weui-media-box weui-media-box_appmsg">
-          <div class="weui-media-box__hd">
-            <img style="width:20px;height:20px;" src="/static/images/benchi.jpg">
-          </div>
-          <div class="weui-media-box__bd">
-            <h4 class="weui-media-box__title">大众 辉昂 2018款 改款 380TSI 两驱商务版</h4>
-            <button class="weui-media-box__desc">关注</button>
-            <button class="weui-media-box__desc">预定热线</button>
-          </div>
-        </a>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+        <div class="weui-cell__bd">
+          <p style="font-size: 14px; hight:4px;float:left;weight:5px ">奔驰</p>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
       </div>
     </div>
-
+  </div>
 </template>
 
 <script>
@@ -72,7 +116,7 @@ export default {
 .mainWrap {
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  /* position: fixed; */
 }
 .bg {
   width: 100vw;
@@ -85,7 +129,7 @@ export default {
   height: 100%;
 }
 
-.nav{
- float: left;
+.nav {
+  float: left;
 }
 </style>

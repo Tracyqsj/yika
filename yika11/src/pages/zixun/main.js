@@ -7,7 +7,7 @@ app.$mount();
 //此处配置窗口表现形式
 export default {
     config: {
-      navigationBarTitleText: '咨询记录'  //标题
+      navigationBarTitleText: '实用干货'  //标题
     }
 }
   

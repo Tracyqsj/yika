@@ -18,7 +18,7 @@
     <div class="line"  @click="goOther(2)">
       <div >
         <img src="/static/images/userInfo.png" alt="">
-        <span>收藏</span>
+        <span>实用干货</span>
       </div>
       <div class="goRight">
         >
@@ -79,17 +79,17 @@ export default {
           url:nextUrl
         })
       }else if(n == 2){
-        nextUrl = "..//main";
+        nextUrl = "../article/main";
         wx.navigateTo({
           url:nextUrl
         })
       }else if(n == 3){
         wx.navigateTo({
-         url: "../report/main"
+         url: "../zixun/main"
         })
       }else{
         wx.navigateToMiniProgram({
-          appId: 'wxe10dd0f9b79a6211',
+          appId: 'wx931900f51f0af468',
           path: 'pages/index/main',
           success(res) {
             // 打开成功
@@ -99,7 +99,7 @@ export default {
     },
     goInput(){
        wx.navigateTo({
-        url:'../stopReasonList/main'
+        url:'../suggest/main'
       })
     },
   },
