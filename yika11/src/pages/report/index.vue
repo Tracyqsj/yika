@@ -36,7 +36,7 @@
         </div>
 
         <div class="weui-cell__bd">
-          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+          <a  ><p style="font-size: 16px;">大众 辉昂 两驱商务版</p></a>
         </div>
       </div>
       <div class="weui-cell">
@@ -108,7 +108,14 @@ export default {
     // this.comInfo = getStorage('registerInfo');
     // this.hostname = this.$store.state.url;
     // this.scan()
-  }
+  },
+    handleclick() {
+      wx.navigateTo({
+        //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
+        url: "../car/main",
+        
+      });
+    }
 };
 </script>
 

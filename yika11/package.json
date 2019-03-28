@@ -15,6 +15,7 @@
     "less-loader": "^4.1.0",
     "mp-weui": "^1.0.4",
     "mpvue": "^1.0.11",
+    "mpvue-weui": "^1.0.6",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

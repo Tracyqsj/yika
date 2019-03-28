@@ -127,7 +127,7 @@ export default {
       inputShowed: false,
       inputVal: "",
       imgs: [
-        "/static/images/banner1.jpg",
+        "https://2aclgika1.i-plc.cn/static/images/biek.png",
         "/static/images/banner2.jpg",
         "/static/images/banner3.jpg",
         "/static/images/banner4.jpg"
