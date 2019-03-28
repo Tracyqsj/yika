@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import '@/style/weui.css'
+import 'mpvue-weui/src/style/weui.css'
 import store from './store/index'
 Vue.prototype.$store=store;
 

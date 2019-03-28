@@ -7,7 +7,7 @@ app.$mount();
 //此处配置窗口表现形式
 export default {
     config: {
-      navigationBarTitleText: '选车'  //标题
+      navigationBarTitleText: '详情'  //标题
     }
 }
   
