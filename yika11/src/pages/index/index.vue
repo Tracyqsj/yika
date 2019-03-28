@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <!-- 这是写html的地方，记住外层只有一个div-->
-    <div class="weui-search-bar">
+    <!-- <div class="weui-search-bar">
       <div class="weui-search-bar__form">
         <div class="weui-search-bar__box">
           <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
@@ -46,7 +46,7 @@
           <div>实时搜索文本</div>
         </div>
       </navigator>
-    </div>
+    </div> -->
 
     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
       <block v-for="(item, index) in imgs" :key="index">
@@ -55,42 +55,43 @@
         </swiper-item>
       </block>
     </swiper>
+
     <div class="grid">
       <a class="weui-grid">
         <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
+          <img src="https://2aclgika1.i-plc.cn/static/images/biek.png" alt>
         </div>
-        <p class="weui-grid__label">大众</p>
+        <p class="weui-grid__label">别克</p>
+      </a>
+      <a  class="weui-grid">
+        <div class="weui-grid__icon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/hanma.png" alt>
+        </div>
+        <p class="weui-grid__label">悍马</p>
       </a>
       <a  class="weui-grid">
         <div class="weui-grid__icon">
           <img src="/static/images/benchi.jpg" alt>
         </div>
-        <p class="weui-grid__label">大众</p>
+        <p class="weui-grid__label">奔驰</p>
       </a>
       <a  class="weui-grid">
         <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
+          <img src="https://2aclgika1.i-plc.cn/static/images/falali.png" alt>
         </div>
-        <p class="weui-grid__label">大众</p>
+        <p class="weui-grid__label">法拉利</p>
       </a>
       <a  class="weui-grid">
         <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
+          <img src="https://2aclgika1.i-plc.cn/static/images/fengtian.png" alt>
         </div>
-        <p class="weui-grid__label">大众</p>
-      </a>
-      <a  class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
-        </div>
-        <p class="weui-grid__label">大众</p>
+        <p class="weui-grid__label">丰田</p>
       </a>
       <a class="weui-grid">
         <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
+          <img src="https://2aclgika1.i-plc.cn/static/images/jizhi.png" alt>
         </div>
-        <p class="weui-grid__label">大众</p>
+        <p class="weui-grid__label">极致</p>
       </a>
       <div class="grid">
         <a  class="weui-grid">
@@ -102,14 +103,16 @@
         <a  class="weui-grid">
           <p class="weui-grid__label">30万以上</p>
         </a>
-        <button class="weui-btn weui-btn_primary" @click="handleclick">查看更多</button>
-        <button class="weui-btn weui-btn_primary" @click="handleclick">今日推荐</button>
-        <div class="weui-media-box__hd">
-          <img style="width:40px;height:40px;" src="/static/images/benchi.jpg">
-        </div>
-        <div class="weui-media-box__bd">
-          <h4 class="weui-media-box__title">产业研究：中国智能网联汽车测试示范区发展研究</h4>
-          <h5>摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</h5>
+        <button class="weui-btn weui-btn_default" @click="handleclick">查看更多</button>
+        <button class="weui-btn weui-btn_default" @click="handleclick">今日推荐</button>
+        <div class="weui-cell">
+          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+              <img src="/static/images/article1.jpg" style="width: 70px;display: block"/>
+          </div>
+          <div class="weui-cell__bd">
+              <p style="font-size: 16px;">智能网联汽车测试示范区发展研究</p>
+              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
+          </div>
         </div>
       </div>
     </div>
@@ -124,8 +127,7 @@ export default {
     return {
       inputShowed: false,
       inputVal: "",
-      imgs: ["/static/images/banner1.jpg"],
-      imgs: ["/static/images/benchi.jpg"]
+      imgs: ["/static/images/banner1.jpg","/static/images/banner2.jpg","/static/images/banner3.jpg","/static/images/banner4.jpg"],
     };
   },
 
@@ -186,7 +188,17 @@ img {
 }
 swiper {
   width: 100%;
-  height: 80px;
+  height: 150px;
   z-index: 1;
+}
+.swiper img{
+  width:100%;
+  height: 100%;
+}
+.weui-grid {
+  dispaly:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>

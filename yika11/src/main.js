@@ -23,7 +23,8 @@ export default {
       "pages/index/main",
       "pages/dream/main",
       "pages/report/main",
-      "pages/car/main"
+      "pages/car/main",
+      "pages/suggest/main"
   
     ],
     window: {
