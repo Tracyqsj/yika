@@ -27,9 +27,9 @@
         >
       </div>
     </div>
-      <div class="line borderBottom" @click="goOther(4)">
+    <div class="line borderBottom" @click="goOther(4)">
       <div  >
-        <!-- <img  alt=""> -->
+        <img src="/static/images/ZHTicon.png" alt="">
         <span>toC</span>
       </div>
       <div class="goRight">
@@ -104,14 +104,14 @@ export default {
 </script>
 
 <style lang='less'>
-.person{
-  img{
+.person img{
+    margin:0 auto;
     width:100px;
     height:100px;
-  }
 }
 .counter-warp{
-  padding-left:15px; 
+  text-align: center;
+  padding:15px;
 }
 .line{
   border-top: 1px solid rgba(229,229,229,1);
