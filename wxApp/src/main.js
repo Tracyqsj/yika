@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
-import '@/style/weui.css'
 import store from './store/index'
+import 'mpvue-weui/src/style/weui.css';
 Vue.prototype.$store=store;
 
 Vue.config.productionTip = false

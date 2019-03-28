@@ -1,88 +1,126 @@
 <template>
   <div class="mainWrap">
-    <div class="bg">
-      <div>
-        <div class="weui-search-bar__box">
-          <!-- <div class="nav">
-            shanghai
-          </div>-->
 
-          <icon class="weui-icon-search_in-box nav" type="search" size="14"></icon>
-          <input
-            type="text"
-            class="weui-search-bar__input"
-            placeholder="搜索"
-            v-model="inputVal"
-            :focus="inputShowed"
-            @input="inputTyping"
-          >
-          <div class="weui-icon-clear" v-if="inputVal.length > 0" @click="clearInput">
-            <icon type="clear" size="14"></icon>
-          </div>
+    <mp-searchbar :isFocus=true :inputValue="inputValue" :placeholder="placeholder" @confirm="search" confirmType="search"></mp-searchbar>
+
+
+    <div v-if="result.page != 0">
+      <div style="text-align: center;font-size: 14px;color: #cccccc" >
+        搜到{{result.recordSize}}条结果
+      </div>
+      <div class="list-item" v-for="(item, index) in result.data">
+        <div class="list-item-img">
+          <img style="width: 100%;height: 100%" src="../../../static/images/benchi.png">
+        </div>
+
+        <div class="list-item-text">
+          <div class="list-item-name"> {{item.name}} </div>
+          <div class="list-item-p">当日售出{{item.daySaleNumber}}台，当月售出{{item.mouthSaleNumber}}台</div>
+          <div class="list-item-p">当日进购{{item.dayBuyNumber}}台，当日购进{{item.mouthBuyNumber}}台</div>
+          <div class="list-item-p">今日利润：{{item.todayProfit}}</div>
         </div>
       </div>
-      <a class="weui-media-box weui-media-box_appmsg">
-        <div class="weui-media-box__hd">
-          <img style="width:20px;height:20px;" src="/static/images/benchi.jpg">
-        </div>
-        <div class="weui-media-box__bd">
-          <h4 class="weui-media-box__title">
-            当日售出xxxxx台，当月售出xxxx台
-           
-          </h4>
-          <h4 class="weui-media-box__title">
-            当日进购xxxxx台，当日购进xxxx台
-          </h4>
-          <h4 class="weui-media-box__title">
-            今日利润：
-          </h4>
-        </div>
-      </a>
-      
+
+
+      <div style="height:30px;line-height: 30px;text-align: center;font-size: 14px;color: #cccccc" v-if="result.page*result.pageSize >= result.recordSize ">
+         已经到底啦
+      </div>
+
+      <div style="height:30px;line-height: 30px;text-align: center;font-size: 14px;color: #cccccc" v-else  @click="search">
+        点击查看更多
+      </div>
     </div>
+
+
+
+
   </div>
 </template>
 
 <script>
+  import mpSearchbar from 'mpvue-weui/src/searchbar';
 export default {
+  components: {
+    mpSearchbar
+  },
   data() {
     return {
-      userInfo: {},
-      unionID: "",
-      comInfo: {},
-      openID: "",
-      compID: ""
+      inputValue: '',
+      placeholder: '快来试试搜索',
+      result:{
+        pageSize: 3,
+        page:0,
+        recordSize : 0,
+        data:[]
+      }
+
     };
   },
-  methods: {},
+  methods: {
+    search(){
+      this.result.page ++;
+      this.result.recordSize = 50;
+
+      this.result.data.push({
+        name:'人人车',
+        daySaleNumber:100,
+        mouthSaleNumber:1000,
+        dayBuyNumber:120,
+        mouthBuyNumber:1200,
+        todayProfit: '1000万'
+      });
+      this.result.data.push({
+        name:'优享车',
+        daySaleNumber:90,
+        mouthSaleNumber:700,
+        dayBuyNumber:120,
+        mouthBuyNumber:900,
+        todayProfit: '1000万'
+      });
+      this.result.data.push({
+        name:'懂车帝',
+        daySaleNumber:120,
+        mouthSaleNumber:600,
+        dayBuyNumber:60,
+        mouthBuyNumber:1100,
+        todayProfit: '1000万'
+      })
+    }
+  },
   created() {},
   onLoad() {
-    // this.userInfo = getStorage('userInfo');
-    // this.comInfo = getStorage('registerInfo');
-    // this.hostname = this.$store.state.url;
-    // this.scan()
   }
 };
 </script>
 
 <style scoped>
 .mainWrap {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-}
-.bg {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 1;
-}
-.bg img {
-  width: 100%;
-  height: 100%;
-}
 
-.nav {
-  float: left;
 }
+  .list-item{
+    width: 100vw;
+    height: 100px;
+    padding: 10px 2vw 10px 2vw;
+    border-bottom: solid #999999;
+    border-bottom-width: thin;
+  }
+  .list-item-img{
+    width:28vw;
+    height: 100%;
+    float: left;
+  }
+  .list-item-text{
+    float: left;
+    margin-left: 2vw;
+    width: 66vw;
+    height: 100%;
+  }
+  .list-item-p{
+    font-size: 14px;
+    color: #b2b2b2;
+    line-height: 25px;
+  }
+  .list-item-name{
+  }
+
 </style>
