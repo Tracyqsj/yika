@@ -46,7 +46,7 @@
           <div>实时搜索文本</div>
         </div>
       </navigator>
-    </div> -->
+    </div>-->
 
     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
       <block v-for="(item, index) in imgs" :key="index">
@@ -58,64 +58,63 @@
 
     <div class="grid">
       <a class="weui-grid">
-        <div class="weui-grid__icon">
+        <div class="weui-grid__icon myicon">
           <img src="https://2aclgika1.i-plc.cn/static/images/biek.png" alt>
+          <p class="weui-grid__label">别克</p>
         </div>
-        <p class="weui-grid__label">别克</p>
-      </a>
-      <a  class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="https://2aclgika1.i-plc.cn/static/images/hanma.png" alt>
-        </div>
-        <p class="weui-grid__label">悍马</p>
-      </a>
-      <a  class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="/static/images/benchi.jpg" alt>
-        </div>
-        <p class="weui-grid__label">奔驰</p>
-      </a>
-      <a  class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="https://2aclgika1.i-plc.cn/static/images/falali.png" alt>
-        </div>
-        <p class="weui-grid__label">法拉利</p>
-      </a>
-      <a  class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="https://2aclgika1.i-plc.cn/static/images/fengtian.png" alt>
-        </div>
-        <p class="weui-grid__label">丰田</p>
       </a>
       <a class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="https://2aclgika1.i-plc.cn/static/images/jizhi.png" alt>
+        <div class="weui-grid__icon myicon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/hanma.png" alt>
+          <p class="weui-grid__label">悍马</p>
         </div>
-        <p class="weui-grid__label">极致</p>
       </a>
-      <div class="grid">
-        <a  class="weui-grid">
-          <p class="weui-grid__label">10万以下</p>
-        </a>
-        <a  class="weui-grid">
-          <p class="weui-grid__label">20万以下</p>
-        </a>
-        <a  class="weui-grid">
-          <p class="weui-grid__label">30万以上</p>
-        </a>
-        <button class="weui-btn weui-btn_default" @click="handleclick">查看更多</button>
-        <button class="weui-btn weui-btn_default" @click="handleclick">今日推荐</button>
-        <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/article1.jpg" style="width: 70px;display: block"/>
-          </div>
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">智能网联汽车测试示范区发展研究</p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
+      <a class="weui-grid">
+        <div class="weui-grid__icon myicon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/benchi.png" alt>
+          <p class="weui-grid__label">奔驰</p>
         </div>
+      </a>
+      <a class="weui-grid">
+        <div class="weui-grid__icon myicon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/falali.png" alt>
+          <p class="weui-grid__label">法拉利</p>
+        </div>
+      </a>
+      <a class="weui-grid">
+        <div class="weui-grid__icon myicon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/fengtian.png" alt>
+          <p class="weui-grid__label">丰田</p>
+        </div>
+      </a>
+      <a class="weui-grid">
+        <div class="weui-grid__icon myicon">
+          <img src="https://2aclgika1.i-plc.cn/static/images/qirui.png" alt>
+          <p class="weui-grid__label">奇瑞</p>
+        </div>
+      </a>
+    </div>
+ 
+    <button class="weui-btn tuijian" @click="handleclick">今日推荐</button>
+    <div class="weui-cell">
+      <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <img src="/static/images/benchi-article.jpg" style="width:50px;display: block">
+      </div>
+      <div class="weui-cell__bd">
+        <p style="font-size: 16px;">全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万</p>
+        <p style="font-size: 13px;color: #888888;">开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。</p>
       </div>
     </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <img src="/static/images/article1.jpg" style="width: 70px;display: block">
+      </div>
+      <div class="weui-cell__bd">
+        <p style="font-size: 16px;">智能网联汽车测试示范区发展研究</p>
+        <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》</p>
+      </div>
+    </div>
+    <button class="weui-btn weui-btn_default tuijian" @click="handleclick">查看更多</button>
   </div>
 </template>
 
@@ -127,7 +126,12 @@ export default {
     return {
       inputShowed: false,
       inputVal: "",
-      imgs: ["/static/images/banner1.jpg","/static/images/banner2.jpg","/static/images/banner3.jpg","/static/images/banner4.jpg"],
+      imgs: [
+        "/static/images/banner1.jpg",
+        "/static/images/banner2.jpg",
+        "/static/images/banner3.jpg",
+        "/static/images/banner4.jpg"
+      ]
     };
   },
 
@@ -148,9 +152,10 @@ export default {
       this.inputVal = e.mp.detail.value;
     },
     handleclick() {
-      wx.switchTab({
+      wx.navigateTo({
         //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
-        url: "../report/main"
+        url: "../article/main",
+        
       });
     }
   },
@@ -181,9 +186,8 @@ export default {
 img {
   width: 50px;
   height: 35px;
-  
 }
-.weui-search-bar{
+.weui-search-bar {
   z-index: -1;
 }
 swiper {
@@ -191,14 +195,23 @@ swiper {
   height: 150px;
   z-index: 1;
 }
-.swiper img{
-  width:100%;
+.swiper img {
+  width: 100%;
   height: 100%;
 }
 .weui-grid {
-  dispaly:flex;
+  dispaly: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.myicon {
+  width: 50px;
+  height: 50px;
+}
+.tuijian {
+  color: rgb(248, 19, 19);
+  font-size: 14px;
+  height: 35px;
 }
 </style>

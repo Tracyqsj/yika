@@ -3,15 +3,21 @@
     <div class="bg">
       <div>
         <div class="weui-search-bar__box">
-          <!-- <div class="nav">
-            shanghai
-          </div> -->
-   
           <icon class="weui-icon-search_in-box nav" type="search" size="14"></icon>
+             <div class="grid">
+        <a  class="weui-grid">
+          <p class="weui-grid__label">10万以下</p>
+        </a>
+        <a  class="weui-grid">
+          <p class="weui-grid__label">20万以下</p>
+        </a>
+        <a  class="weui-grid">
+          <p class="weui-grid__label">30万以上</p>
+    </a>
           <input
             type="text"
             class="weui-search-bar__input"
-            placeholder="搜索"
+            placeholder="高级搜索"
             v-model="inputVal"
             :focus="inputShowed"
             @input="inputTyping"
@@ -21,61 +27,67 @@
           </div>
         </div>
       </div>
-      <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/benchi.jpg" style="width: 70px;height: 60px;display: block"/>
-          </div>
-          
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">大众 辉昂 两驱商务版 <button class="weui-btn weui-btn_mini weui-btn_primary" style="margin-top:2px;float:right;">加关注</button></p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
       </div>
       <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/benchi.jpg" style="width: 70px;height: 60px;display: block"/>
-          </div>
-          
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">大众 辉昂 两驱商务版 <button class="weui-btn weui-btn_mini weui-btn_primary" style="margin-top:2px;float:right;">加关注</button></p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block" >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
       </div>
       <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/benchi.jpg" style="width: 70px;height: 60px;display: block"/>
-          </div>
-          
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">大众 辉昂 两驱商务版 <button class="weui-btn weui-btn_mini weui-btn_primary" style="margin-top:2px;float:right;">加关注</button></p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
       </div>
       <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/benchi.jpg" style="width: 70px;height: 60px;display: block"/>
-          </div>
-          
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">大众 辉昂 两驱商务版 <button class="weui-btn weui-btn_mini weui-btn_primary" style="margin-top:2px;float:right;">加关注</button></p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+        <div class="weui-cell__bd">
+          <p style="font-size: 14px; hight:4px;float:left;weight:5px ">奔驰</p>
+        </div>
       </div>
       <div class="weui-cell">
-          <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-              <img src="/static/images/benchi.jpg" style="width: 70px;height: 60px;display: block"/>
-          </div>
-          
-          <div class="weui-cell__bd">
-              <p style="font-size: 16px;">大众 辉昂 两驱商务版 <button class="weui-btn weui-btn_mini weui-btn_primary" style="margin-top:2px;float:right;">加关注</button></p>
-              <p style="font-size: 13px;color: #888888;">摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》，课题研究人员通过对国家级智能网联汽车测试示范区的实地调查和问卷调研，探索测</p>
-          </div>
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
       </div>
-        
-        
+      <div class="weui-cell">
+        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <img
+            src="https://2aclgika1.i-plc.cn/static/images/benchi.png"
+            style="width: 70px;height: 60px;display: block"
+          >
+        </div>
+
+        <div class="weui-cell__bd">
+          <p style="font-size: 16px;">大众 辉昂 两驱商务版</p>
+        </div>
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -117,7 +129,7 @@ export default {
   height: 100%;
 }
 
-.nav{
- float: left;
+.nav {
+  float: left;
 }
 </style>
