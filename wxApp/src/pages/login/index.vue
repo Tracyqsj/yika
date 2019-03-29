@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <div>
-      <img src="/static/images/logo.jpg" alt>
-      <p>宜咔购车</p>
+      <img src="/static/images/logo.png" alt>
+      <p>宜咔购车--</p>
     </div>
     <button class="loginBtn" open-type="getUserInfo" @getuserinfo="bindGetUserInfo">登录/注册</button>
   </div>

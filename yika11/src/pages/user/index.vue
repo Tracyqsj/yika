@@ -124,11 +124,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.person{
-  img{
+.person img{
+    margin:0 auto;
     width:100px;
     height:100px;
-  }
 }
 .counter-warp{
   padding-left:15px; 

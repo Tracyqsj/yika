@@ -13,7 +13,7 @@
         style="height: 87vh;">
         <div class="list-item" v-for="(item, index) in result.data" :key="item.id" @click="handleClick(index)">
           <div class="list-item-img">
-            <img style="width: 100%;height: 100%" src="../../../static/images/benchi.png">
+            <img style="width: 100%;height: 100%" src="/static/images/renrenche.jpg">
           </div>
 
           <div class="list-item-text">

@@ -58,17 +58,17 @@
         data:[
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "大众 辉昂 两驱商务版",
+            name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万"
           },
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "大众 辉昂 两驱商务版",
+            name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万"
           },
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "大众 辉昂 两驱商务版",
+            name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万"
           },
           {
@@ -78,12 +78,12 @@
           },
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "大众 辉昂 两驱商务版",
+            name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万"
           },
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "大众 辉昂 两驱商务版",
+            name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万"
           }
         ]

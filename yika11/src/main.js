@@ -46,7 +46,7 @@ export default {
       }, 
       {
         "pagePath": "pages/report/main",
-        "text": "选车",
+        "text": "淘车",
         "iconPath": "/static/images/news-wei.png",
         "selectedIconPath": "/static/images/news.png"
       },{

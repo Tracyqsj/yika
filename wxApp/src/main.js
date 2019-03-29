@@ -55,7 +55,7 @@ export default {
       "position":"bottom"
     },
     navigateToMiniProgramAppIdList:[
-      'wxe10dd0f9b79a6211'
+      'wx931900f51f0af468'
     ]
   }
 }
