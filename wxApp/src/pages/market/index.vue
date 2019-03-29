@@ -55,9 +55,35 @@ export default {
       placeholder: '快来试试搜索',
       result:{
         pageSize: 3,
-        page:0,
-        recordSize : 0,
-        data:[]
+        page:1,
+        recordSize : 12,
+        data:[{
+          id: 1,
+          name:'人人车',
+          daySaleNumber:100,
+          mouthSaleNumber:1000,
+          dayBuyNumber:120,
+          mouthBuyNumber:1200,
+          todayProfit: '1000万'
+        },
+          {
+            id: 2,
+            name:'优享车',
+            daySaleNumber:90,
+            mouthSaleNumber:700,
+            dayBuyNumber:120,
+            mouthBuyNumber:900,
+            todayProfit: '1000万'
+          },{
+            id: 3,
+            name:'懂车帝',
+            daySaleNumber:120,
+            mouthSaleNumber:600,
+            dayBuyNumber:60,
+            mouthBuyNumber:1100,
+            todayProfit: '1000万'
+          }
+        ]
       },
       isShowLoading: false
 
@@ -75,7 +101,6 @@ export default {
       let self = this;
       setTimeout(function () {
         self.result.page ++;
-        self.result.recordSize = 12;
 
         self.result.data.push({
           id: (self.result.page-1)*self.result.pageSize + 1,

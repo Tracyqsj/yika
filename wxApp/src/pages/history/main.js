@@ -7,7 +7,10 @@ app.$mount();
 //此处配置窗口表现形式
 export default {
     config: {
-      navigationBarTitleText: '历史数据'  //标题
+      navigationBarTitleText: '历史数据',  //标题
+      usingComponents: {
+        "ec-canvas": "../../../static/ec-canvas/ec-canvas"
+      }
     }
 }
   
