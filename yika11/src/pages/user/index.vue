@@ -123,7 +123,7 @@ export default {
 }
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 .person{
   img{
     width:100px;

@@ -13,6 +13,7 @@ export default {
 </script>
 
 <style>
+  @import "../static/style/iconfont.css";
 .container {
   height: 100%;
   display: flex;
@@ -29,4 +30,14 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+
+  .myrate{
+    height: 20px !important; width: 20px !important;margin-top: 10px;
+  }
+
+  .mybutton{
+    width: 50vw !important;
+    float: left;
+    margin:0 !important;
+  }
 </style>

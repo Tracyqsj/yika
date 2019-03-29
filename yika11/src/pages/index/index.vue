@@ -7,7 +7,7 @@
         </swiper-item>
       </block>
     </swiper>
-
+    <mp-loading :showLoading="isShowLoading" loadingText="加载中..." mask="true"></mp-loading>
     <div class="grid">
       <a class="weui-grid">
         <div class="weui-grid__icon myicon">
@@ -63,13 +63,14 @@
 </template>
 
 <script>
-import { setStorage } from "@/utils/index"; //这是引用utils中封装的方法
-
+import mpLoading from 'mpvue-weui/src/loading';
 export default {
+  components: {
+    mpLoading
+  },
   data() {
     return {
-      inputShowed: false,
-      inputVal: "",
+      isShowLoading: false,
       imgs: [
         "https://2aclgika1.i-plc.cn/static/images/biek.png",
         "/static/images/banner2.jpg",
@@ -95,20 +96,7 @@ export default {
 
   methods: {
     //这是定义函数的地方。只是定义，但不会立即被调用，需要手动去调用，下面函数我不删掉，留给你做示例
-    showInput() {
-      this.inputShowed = true;
-    },
-    hideInput() {
-      this.inputVal = "";
-      this.inputShowed = false;
-    },
-    clearInput() {
-      this.inputVal = "";
-    },
-    inputTyping(e) {
-      console.log(e);
-      this.inputVal = e.mp.detail.value;
-    },
+
     tuijianClick() {
       wx.navigateTo({
         //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
@@ -117,21 +105,29 @@ export default {
       });
     },
     handleclick(){
-      this.result.data.push(
-        {
-          img : '/static/images/benchi-article.jpg',
-          title: '全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万',
-          content: '开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。'
 
-        }
-      );
-      this.result.data.push(
-        {
-          img : '/static/images/article1.jpg',
-          title: '智能网联汽车测试示范区发展研究',
-          content: '摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》'
-        }
-      );
+      this.isShowLoading = true;
+
+      let self = this;
+      setTimeout(function () {
+        self.result.data.push(
+          {
+            img : '/static/images/benchi-article.jpg',
+            title: '全系进口的奔驰，油耗5毛，爆胎照样跑，售价低至17.65万',
+            content: '开大奔，坐宝马”是大多数男士的梦想，也是大多数男士成功的标志。'
+
+          }
+        );
+        self.result.data.push(
+          {
+            img : '/static/images/article1.jpg',
+            title: '智能网联汽车测试示范区发展研究',
+            content: '摘要：本文节选国汽智联的研究报告《中国智能网联汽车测试示范区发展调查研究》'
+          }
+        );
+        self.isShowLoading = false;
+      }, 500)
+
     }
   },
   mounted() {
@@ -162,10 +158,7 @@ img {
   width: 50px;
   height: 35px;
 }
-.weui-search-bar {
-  z-index: -1;
-}
-swiper {
+.swiper {
   width: 100%;
   height: 150px;
   z-index: 1;
