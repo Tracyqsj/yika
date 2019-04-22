@@ -124,15 +124,15 @@ export default {
 </script>
 
 <style lang='less' scoped>
-.person{
-  img{
+  .person img{
+    margin:0 auto;
     width:100px;
     height:100px;
   }
-}
-.counter-warp{
-  padding-left:15px; 
-}
+  .counter-warp{
+    text-align: center;
+    padding:15px;
+  }
 .line{
   border-top: 1px solid rgba(229,229,229,1);
   display: flex;
@@ -140,27 +140,27 @@ export default {
   align-items: center;
   height: 44px;
   padding: 0 15px 0 0;
-  img{
-    width:30px;
-    height:29px;
-    margin-right: 10px;
-  }
-  div{
-    display: flex;
-    align-items: center;
-    span{
-      font-weight:400;
-      color:rgba(4,7,43,0.65);
-      line-height:24px;
-      font-size:17px;
-    }
-  }
-  .goRight{
-    width:8px;
-    height:13px;
-  }
+img{
+  width:30px;
+  height:29px;
+  margin-right: 10px;
+}
+div{
+  display: flex;
+  align-items: center;
+span{
+  font-weight:400;
+  color:rgba(4,7,43,0.65);
+  line-height:24px;
+  font-size:17px;
+}
+}
+.goRight{
+  width:8px;
+  height:13px;
+}
 }
 .borderBottom{
-  border-bottom:  1px solid rgba(229,229,229,1);  
+  border-bottom:  1px solid rgba(229,229,229,1);
 }
 </style>

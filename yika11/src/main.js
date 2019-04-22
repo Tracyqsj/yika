@@ -25,6 +25,7 @@ export default {
       "pages/report/main",
       "pages/car/main",
       "pages/suggest/main",
+      "pages/onebrand/main",
       "pages/article/main"
 
   
