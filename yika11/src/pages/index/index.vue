@@ -3,44 +3,44 @@
     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500">
       <block v-for="(item, index) in imgs" :key="index">
         <swiper-item>
-          <img :src="item">
+          <img :src="item" @click="bannerClickHandle(index)">
         </swiper-item>
       </block>
     </swiper>
     <mp-loading :showLoading="isShowLoading" loadingText="加载中..." mask="true"></mp-loading>
     <div class="grid">
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(0)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/biek.png" alt>
           <p class="weui-grid__label">别克</p>
         </div>
       </a>
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(1)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/hanma.png" alt>
           <p class="weui-grid__label">悍马</p>
         </div>
       </a>
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(2)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/benchi.png" alt>
           <p class="weui-grid__label">奔驰</p>
         </div>
       </a>
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(3)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/falali.png" alt>
           <p class="weui-grid__label">法拉利</p>
         </div>
       </a>
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(4)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/fengtian.png" alt>
           <p class="weui-grid__label">丰田</p>
         </div>
       </a>
-      <a class="weui-grid">
-        <div class="weui-grid__icon myicon">
+      <a class="weui-grid" @click="oneBrandClickHandle(5)">
+        <div class="weui-grid__icon myicon" >
           <img src="https://2aclgika1.i-plc.cn/static/images/qirui.png" alt>
           <p class="weui-grid__label">奇瑞</p>
         </div>
@@ -48,7 +48,7 @@
     </div>
  
     <button class="weui-btn tuijian" @click="handleclick">今日推荐</button>
-    <div class="weui-cell" v-for="(item,index) in result.data" @click="tuijianClick">
+    <div class="weui-cell" v-for="(item,index) in result.data" @click="tuijianClick(index)">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
         <img :src="item.img" style="width:70px;display: block">
       </div>
@@ -97,11 +97,22 @@ export default {
   methods: {
     //这是定义函数的地方。只是定义，但不会立即被调用，需要手动去调用，下面函数我不删掉，留给你做示例
 
-    tuijianClick() {
+    tuijianClick(index) {
       wx.navigateTo({
         //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
-        url: "../article/main",
-        
+        url: "../article/main?banner="+index
+      });
+    },
+    bannerClickHandle(index){
+      wx.navigateTo({
+        //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
+        url: "../article/main?index="+index
+      });
+    },
+    oneBrandClickHandle(index){
+      wx.navigateTo({
+        //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
+        url: "../onebrand/main?index="+index
       });
     },
     handleclick(){
