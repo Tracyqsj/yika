@@ -1,11 +1,9 @@
 <template>
   <div class="counter-warp">
-
     <div class="person">
       <img :src="userImg" alt="">
       <p>{{userName}}</p>
     </div>
-
     <div class="line"  @click="goOther(2)">
       <div >
         <img src="/static/images/userInfo.png" alt="">
@@ -16,7 +14,6 @@
       </div>
     </div>
 
-  
     <div class="line " @click="goInput">
        <div  >
         <img src="/static/images/ZHTicon.png" alt="">
@@ -26,6 +23,7 @@
       <div class="goRight">
         >
       </div>
+      
     </div>
     <div class="line borderBottom" @click="goOther(4)">
       <div  >

@@ -11,7 +11,7 @@
 
     <div style="padding: 10px 30px 10px 30px;">
       <div style="font-size: 16px;font-weight: bold">
-        大众 辉昂 2018款 改款 380TSI 两驱商务版
+        别克 辉昂 2018款 改款 380TSI 两驱商务版
       </div>
       <div style="font-size: 14px;">价格:13万</div>
       <mpRate rateValue=3 rateClass="myrate"></mpRate>

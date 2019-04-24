@@ -7,7 +7,7 @@ app.$mount();
 //此处配置窗口表现形式
 export default {
     config: {
-      navigationBarTitleText: '清单'  //标题
+      navigationBarTitleText: '心愿'  //标题
     }
 }
   

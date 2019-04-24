@@ -17,7 +17,7 @@ export default {
   },
 
   methods: {
-    //这是定义函数的地方。只是定义，但不会立即被调用，需要手动去调用，下面函数我不删掉，留给你做示例
+    //这是定义函数的地方。只是定义，但不会立即被调用，需要手动去调用
     showInput() {
       this.inputShowed = true;
     },
@@ -68,12 +68,6 @@ img {
   height: 35px;
   
 }
-.weui-search-bar{
-  z-index: -1;
-}
-swiper {
-  width: 100%;
-  height: 80px;
-  z-index: 1;
-}
+
+
 </style>

@@ -1,8 +1,6 @@
 <template>
   <div class="mainWrap">
-
     <mp-searchbar :isFocus=true :inputValue="inputValue" :placeholder="placeholder" @confirm="search" confirmType="search"></mp-searchbar>
-
     <mp-loading :showLoading="isShowLoading" loadingText="加载中..." mask="true">    </mp-loading>
     <div v-if="result.page != 0">
       <div style="text-align: center;font-size: 14px;color: #cccccc" >
@@ -33,11 +31,6 @@
         </div>
       </scroll-view>
     </div>
-
-
-
-
-
   </div>
 </template>
 

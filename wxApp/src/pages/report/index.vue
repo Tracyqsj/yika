@@ -1,11 +1,6 @@
 <template>
   <div class="mainWrap">
-
     <ec-canvas class="canvas" :ec="ec"></ec-canvas>
-
-    <!--<div>-->
-      <!---->
-    <!--</div>-->
   </div>
 </template>
 

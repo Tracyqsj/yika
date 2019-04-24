@@ -3,7 +3,7 @@
 
     <div style="width: 100vw;height: 100px;">
       <div style="float: left;width: 33%;height: 100%;text-align: center;line-height: 100%;">
-        <img src="https://2aclgika1.i-plc.cn/static/images/biek.png" style="margin: 0 auto;display: unset;">
+        <img src="/static/images/renrenche.jpg" style="margin: 0 auto;display: unset;">
       </div>
       <div style="float: left;width: 67%;height: 100%;text-align: center;display: flex;display: -webkit-flex;justify-content:center;align-items: center;">
         <div>
