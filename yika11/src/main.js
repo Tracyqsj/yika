@@ -26,9 +26,9 @@ export default {
       "pages/car/main",
       "pages/suggest/main",
       "pages/onebrand/main",
-      "pages/article/main"
+      "pages/article/main",
+      "pages/history/main"
 
-  
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -44,7 +44,7 @@ export default {
         "text": "首页",
         "iconPath": "/static/images/index-wei.png",
         "selectedIconPath": "/static/images/index.png"
-      }, 
+      },
       {
         "pagePath": "pages/report/main",
         "text": "淘车",

@@ -74,7 +74,7 @@ export default {
     goOther(n){
        var nextUrl = '';
       if(n == 1){
-        nextUrl = "../car/main";
+        nextUrl = "../history/main";
         wx.navigateTo({
           url:nextUrl
         })

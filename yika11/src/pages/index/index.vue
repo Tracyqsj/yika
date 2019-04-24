@@ -46,7 +46,7 @@
         </div>
       </a>
     </div>
- 
+
     <button class="weui-btn tuijian" @click="handleclick">今日推荐</button>
     <div class="weui-cell" v-for="(item,index) in result.data" @click="tuijianClick(index)">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
