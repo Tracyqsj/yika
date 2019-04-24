@@ -33,7 +33,7 @@
         >
       </div>
     </div>
-  
+
     <div class="line " @click="goInput">
        <div  >
         <img src="/static/images/ZHTicon.png" alt="">
@@ -53,7 +53,7 @@
         >
       </div>
     </div>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -69,7 +69,7 @@ export default {
 
     }
   },
-  
+
   methods: {
     goOther(n){
        var nextUrl = '';
@@ -95,7 +95,7 @@ export default {
             // 打开成功
           }
         })
-      }     
+      }
     },
     goInput(){
        wx.navigateTo({
@@ -124,16 +124,7 @@ export default {
 </script>
 
 <style lang='less' scoped>
-<<<<<<< HEAD
-.person img{
-    margin:0 auto;
-    width:100px;
-    height:100px;
-}
-.counter-warp{
-  padding-left:15px; 
-}
-=======
+
   .person img{
     margin:0 auto;
     width:100px;
@@ -143,7 +134,7 @@ export default {
     text-align: center;
     padding:15px;
   }
->>>>>>> 0ca6699fdc1ad5664477d937d33a437b824891d5
+
 .line{
   border-top: 1px solid rgba(229,229,229,1);
   display: flex;
