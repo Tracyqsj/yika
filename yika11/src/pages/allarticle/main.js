@@ -2,12 +2,12 @@ import Vue from 'vue'
 import App from './index'
 
 const app = new Vue(App)
-app.$mount(); 
+app.$mount();
 
 //此处配置窗口表现形式
 export default {
     config: {
-      navigationBarTitleText: '实用干货'  //标题
+      navigationBarTitleText: '实用文章'  //标题
     }
 }
-  
+

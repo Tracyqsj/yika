@@ -7,8 +7,8 @@
     </div>
 
     <div class="line" @click="goOther(1)">
-      <div >
-        <img src="/static/images/history.png" alt="">
+      <div>
+        <i class="iconfont " >&#xe766;</i>
         <span>浏览历史</span>
       </div>
       <div class="goRight">
@@ -24,30 +24,10 @@
         >
       </div>
     </div>
-    <div class="line" @click="goOther(3)">
+    <div class="line  borderBottom" @click="goOther(3)">
       <div  >
         <img src="/static/images/shareCode.png" alt="">
-        <span  @click="handleclick">咨询记录</span>
-      </div>
-      <div class="goRight">
-        >
-      </div>
-    </div>
-
-    <div class="line " @click="goInput">
-       <div  >
-        <img src="/static/images/ZHTicon.png" alt="">
-        <span>反馈意见
-        </span>
-      </div>
-      <div class="goRight">
-        >
-      </div>
-    </div>
-      <div class="line borderBottom" @click="goOther(4)">
-      <div  >
-        <!-- <img  alt=""> -->
-        <span>toB</span>
+        <span  @click="handleclick">反馈意见</span>
       </div>
       <div class="goRight">
         >
@@ -79,35 +59,19 @@ export default {
           url:nextUrl
         })
       }else if(n == 2){
-        nextUrl = "../article/main";
+        nextUrl = "../allarticle/main";
         wx.navigateTo({
           url:nextUrl
         })
       }else if(n == 3){
         wx.navigateTo({
-         url: "../zixun/main"
-        })
-      }else{
-        wx.navigateToMiniProgram({
-          appId: 'wx931900f51f0af468',
-          path: 'pages/index/main',
-          success(res) {
-            // 打开成功
-          }
+         url: "../suggest/main"
         })
       }
     },
-    goInput(){
-       wx.navigateTo({
-        url:'../suggest/main'
-      })
-    },
+
   },
-  handleclick(){
-    wx.navigateTo({
-        url:'../zixun/main'
-      })
-  },
+
   created () {
 
     //此处的两行代码是指将存在缓存中的用户信息赋值给用户变量

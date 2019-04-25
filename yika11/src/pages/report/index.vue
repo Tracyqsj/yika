@@ -14,6 +14,7 @@
 
     <mpLoading :showLoading="isShowLoading" loadingText="加载中..." mask="true"></mpLoading>
     <mpToast type="success" v-model="showToast" content="添加心愿成功"></mpToast>
+    <mpToast type="success" v-model="cancelshowToast" content="取消心愿成功"></mpToast>
     <div class="weui-cell"  v-for="(item,index) in data" @click = "toCar">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
         <img
@@ -29,7 +30,7 @@
       </div>
 
       <div class="weui-cell__ft">
-        <i class="iconfont " @click.stop="likeCar">&#xe6af;</i>
+        <i  :class="[item.like? 'liked': '', 'iconfont'] " @click.stop="likeCar(item)" >&#xe626;</i>
       </div>
     </div>
 
@@ -56,96 +57,63 @@
       placeholder: '搜一下',
       isShowLoading: false,
       showToast:false,
-
+      cancelshowToast: false,
         data:[
           {
+            id:6,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万",
             price: 10,
-            sales:110
+            sales:110,
+            like: false
           },
           {
+            id:5,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万",
-            price: 120,
-            sales:160
+            price: 20,
+            sales:160,
+            like: false
           },
           {
+            id:4,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万",
-            price: 140,
-            sales:150
+            price: 240,
+            sales:150,
+            like: false
           },
           {
+            id:3,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰",
             content:"首付仅需3万",
             price:20,
-            sales:100
+            sales:660,
+            like: false
           },
           {
+            id:2,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万",
             price: 60,
-            sales:110
+            sales:110,
+            like: false
           },
           {
+            id:1,
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
             content:"首付仅需3万",
             price: 40,
-            sales:120
+            sales:120,
+            like: false
           }
-        ],
-        defaultData:[
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰 辉昂 两驱商务版",
-        content:"首付仅需3万",
-        price: 10,
-        sales:110
-      },
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰 辉昂 两驱商务版",
-        content:"首付仅需3万",
-        price: 120,
-        sales:160
-      },
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰 辉昂 两驱商务版",
-        content:"首付仅需3万",
-        price: 140,
-        sales:150
-      },
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰",
-        content:"首付仅需3万",
-        price:20,
-        sales:100
-      },
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰 辉昂 两驱商务版",
-        content:"首付仅需3万",
-        price: 60,
-        sales:110
-      },
-      {
-        img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-        name: "奔驰 辉昂 两驱商务版",
-        content:"首付仅需3万",
-        price: 40,
-        sales:120
-      }
-    ]
-
+        ]
     };
   },
   methods: {
@@ -154,9 +122,9 @@
         for (let i = 0; i < len; i++) {
           for (let j = 0; j < len - 1 - i; j++) {
             if (this.data[j][key] > this.data[j+1][key]) { //相邻元素两两对比
-              let temp = this.data[j+1][key]; //元素交换
-              this.data[j+1][key] = this.data[j][key];
-              this.data[j][key] = temp;
+              let temp = this.data[j+1]; //元素交换
+              this.data[j+1] = this.data[j];
+              this.data[j] = temp;
             }
           }
         }
@@ -168,19 +136,7 @@
       if (this.saleFilter){
         this.sort("sales");
       } else{
-
-        this.data = []
-        let len = this.defaultData.length;
-        for (let i = 0; i < len; i++) {
-          let obj = {};
-          obj.img= this.defaultData[i].img;
-          obj.name= this.defaultData[i].name;
-          obj.content= this.defaultData[i].content;
-          obj.price= this.defaultData[i].price;
-          obj.sales= this.defaultData[i].sales;
-          this.data.push(obj)
-        }
-
+        this.sort("id");
       }
 
     },
@@ -193,18 +149,7 @@
         this.sort("price");
 
       } else{
-        this.data = []
-        let len = this.defaultData.length;
-        for (let i = 0; i < len; i++) {
-          let obj = {};
-          obj.img= this.defaultData[i].img;
-            obj.name= this.defaultData[i].name;
-            obj.content= this.defaultData[i].content;
-            obj.price= this.defaultData[i].price;
-            obj.sales= this.defaultData[i].sales;
-
-          this.data.push(obj)
-        }
+        this.sort("id");
       }
 
     },
@@ -225,8 +170,15 @@
       });
     },
 
-    likeCar(e){
-      this.showToast = true;
+    likeCar(item){
+
+      if (item.like){
+        this.cancelshowToast = true;
+      } else {
+        this.showToast = true;
+      }
+
+      item.like = ! item.like;
     },
     toCar(){
       wx.navigateTo({
@@ -249,7 +201,11 @@
 }
 
   .filter{
-    color: green;
+    color: #00D7A0;
+  }
+
+  .liked{
+    color: red;
   }
 
 </style>

@@ -24,7 +24,7 @@ export default {
       "pages/report/main",
       "pages/concern/main",
       "pages/history/main"
-  
+
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -33,14 +33,14 @@ export default {
       navigationBarTextStyle: 'black'
     },
     "tabBar": {
-      // "selectedColor": "",
+      "selectedColor": "00D7A0",
       "list": [
        {
         "pagePath": "pages/market/main",
         "text": "市场",
         "iconPath": "/static/images/index-wei.png",
         "selectedIconPath": "/static/images/index.png"
-      }, 
+      },
       {
         "pagePath": "pages/report/main",
         "text": "报表",

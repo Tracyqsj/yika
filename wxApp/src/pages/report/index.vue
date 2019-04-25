@@ -6,6 +6,7 @@
 
 <script>
   const options = {
+    color:['#dd6b66','#759aa0','#e69d87','#8dc1a9','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42'],
     title: {
       text: '昨日各平台交易量',
       x:'center'
@@ -19,6 +20,7 @@
     legend: {
       orient: 'vertical',
       left: 'left',
+      top: 20,
       data: ['人人车','优享车','懂车帝','瓜子二手车']
     },
 
@@ -31,8 +33,8 @@
         data:[
           {value:1000, name:'人人车'},
           {value:1200, name:'优享车'},
-          {value:800, name:'懂车帝'},
-          {value:1700, name:'瓜子二手车'}
+          {value:800, name:'瓜子二手车'},
+          {value:1700, name:'懂车帝'}
         ],
         itemStyle: {
           emphasis: {
@@ -48,7 +50,7 @@ export default {
   data() {
     return {
       ec: {
-        // 传 options
+         // 传 options
         options: options
       }
     };

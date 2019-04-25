@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="line " @click="goInput">
+    <div class="line borderBottom" @click="goInput">
        <div  >
         <img src="/static/images/ZHTicon.png" alt="">
         <span>反馈意见
@@ -23,18 +23,8 @@
       <div class="goRight">
         >
       </div>
-      
     </div>
-    <div class="line borderBottom" @click="goOther(4)">
-      <div  >
-        <img src="/static/images/ZHTicon.png" alt="">
-        <span>toC</span>
-      </div>
-      <div class="goRight">
-        >
-      </div>
-    </div>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -47,38 +37,20 @@ export default {
       url:'',
       userImg:'',
       userName:""
-
     }
   },
-  
+
   methods: {
     goOther(n){
-       var nextUrl = '';
-      if(n == 1){
-        nextUrl = "../concern/main";
-        wx.navigateTo({
-          url:nextUrl
-        })
-      }else if(n == 2){
-        nextUrl = "../index/main";
+      if(n == 2){
+        let nextUrl = "../concern/main";
         wx.navigateTo({
           url:nextUrl
         })
       }
-      else{
-        wx.navigateToMiniProgram({
-          appId: 'wxe10dd0f9b79a6211',
-          path: 'pages/index/main',
-          success(res) {
-            // 打开成功
-          }
-        })
-      }     
     },
     goInput(){
-       wx.navigateTo({
-        url:'../stopReasonList/main'
-      })
+
     },
   },
   handleclick(){
@@ -139,6 +111,6 @@ export default {
   }
 }
 .borderBottom{
-  border-bottom:  1px solid rgba(229,229,229,1);  
+  border-bottom:  1px solid rgba(229,229,229,1);
 }
 </style>

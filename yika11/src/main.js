@@ -27,6 +27,7 @@ export default {
       "pages/suggest/main",
       "pages/onebrand/main",
       "pages/article/main",
+      "pages/allarticle/main",
       "pages/history/main"
 
     ],
@@ -37,7 +38,7 @@ export default {
       navigationBarTextStyle: 'black'
     },
     "tabBar": {
-      // "selectedColor": "",
+      "selectedColor": "00D7A0",
       "list": [
        {
         "pagePath": "pages/index/main",

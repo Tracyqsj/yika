@@ -1,6 +1,7 @@
 <template>
   <div class="mainWrap">
-    <mpToast type="success" v-model="showToast" content="取消心愿成功"></mpToast>
+    <mpToast type="success" v-model="showToast" content="添加心愿成功"></mpToast>
+    <mpToast type="success" v-model="cancelshowToast" content="取消心愿成功"></mpToast>
     <div class="weui-cell"  v-for="(item,index) in result.data" @click = "toCar">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
         <img
@@ -14,7 +15,7 @@
       </div>
 
       <div class="weui-cell__ft">
-        <i class="iconfont " @click.stop="likeCar">&#xe6af;</i>
+        <i  :class="[item.like? 'liked': '', 'iconfont'] " @click.stop="likeCar(item)" >&#xe626;</i>
       </div>
     </div>
 
@@ -30,12 +31,14 @@
   data() {
     return {
       showToast:false,
+      cancelshowToast: false,
       result:{
         data:[
           {
             img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
             name: "奔驰 辉昂 两驱商务版",
-            content:"首付仅需3万"
+            content:"首付仅需3万",
+            like: true
           },
           // {
           //   img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
@@ -60,15 +63,23 @@
           {
             img: "https://2aclgika1.i-plc.cn/static/images/laosilaosi.png",
             name: "劳斯莱斯",
-            content:"分期免手续费"
+            content:"分期免手续费",
+            like: true
           }
         ]
       }
     };
   },
   methods: {
-    likeCar(e){
-      this.showToast = true;
+    likeCar(item){
+
+      if (item.like){
+        this.cancelshowToast = true;
+      } else {
+        this.showToast = true;
+      }
+
+      item.like = ! item.like;
     },
     toCar(){
       wx.navigateTo({
@@ -87,5 +98,7 @@
   height: 100vh;
   position: fixed;
 }
-
+.liked{
+  color: red;
+}
 </style>

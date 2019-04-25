@@ -100,7 +100,7 @@ export default {
     tuijianClick(index) {
       wx.navigateTo({
         //wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
-        url: "../article/main?banner="+index
+        url: "../article/main?index="+index
       });
     },
     bannerClickHandle(index){
@@ -148,14 +148,6 @@ export default {
   onLoad(options) {
     ///这个也是页面刚加载完成之后的。要触发的代码，和上面的基本相同，除了要接受上个页面的传参的时候的情况，比如下面的代码就是获取上一个页面带过来的参数
 
-    if (options.hasOwnProperty("scene")) {
-      var scene = options.scene;
-      this.hostname = scene;
-      wx.redirectTo({ url: "../worker-approve/main" });
-    }
-
-    //setStorage('hostname',this.hostname);
-    //this.getMachineData();
   },
   onShow() {
     //这个是页面显示的时候，调用的，每次tab切换，都会调用一次，用到的地方不多

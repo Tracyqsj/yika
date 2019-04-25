@@ -2,7 +2,7 @@
   <div class="mainWrap">
     <mpToast type="success" v-model="showToast" content="添加心愿成功"></mpToast>
     <mpToast type="success" v-model="cancelshowToast" content="取消心愿成功"></mpToast>
-    <div class="weui-cell"  v-for="(item,index) in result.data">
+    <div class="weui-cell"  v-for="(item,index) in result.data" @click = "toCar">
       <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
         <img
           :src = "item.img"
@@ -35,35 +35,15 @@
       result:{
         data:[
           {
-            img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-            name: "奔驰 辉昂 两驱商务版",
-            content:"首付仅需3万",
+            img: "/static/images/benchi-article.jpg",
+            name: "20万以内想选择与众不同的车型？这款车完全满足你！",
             like: true
           },
-          // {
-          //   img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-          //   name: "奔驰 辉昂 两驱商务版",
-          //   content:"首付仅需3万"
-          // },
-          // {
-          //   img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-          //   name: "奔驰 辉昂 两驱商务版",
-          //   content:"首付仅需3万"
-          // },
-          // {
-          //   img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-          //   name: "奔驰",
-          //   content:"首付仅需3万"
-          // },
-          // {
-          //   img: "https://2aclgika1.i-plc.cn/static/images/benchi.png",
-          //   name: "奔驰 辉昂 两驱商务版",
-          //   content:"首付仅需3万"
-          // },
+
           {
-            img: "https://2aclgika1.i-plc.cn/static/images/laosilaosi.png",
-            name: "劳斯莱斯",
-            content:"分期免手续费",
+            img: "/static/images/benchi-article.jpg",
+            name: "全新一代宝马4系Coupe曝光！设计优雅堪比8系，还要啥3系？",
+
             like: true
           }
         ]
@@ -71,15 +51,20 @@
     };
   },
   methods: {
-    likeCar(item) {
+    likeCar(item){
 
-      if (item.like) {
+      if (item.like){
         this.cancelshowToast = true;
       } else {
         this.showToast = true;
       }
 
-      item.like = !item.like;
+      item.like = ! item.like;
+    },
+    toCar(){
+      wx.navigateTo({
+        url: "../car/main"
+      });
     }
   },
   created() {},
